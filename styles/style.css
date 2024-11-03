@@ -1,0 +1,293 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts-3by.pages.dev/open-sans-v40-latin/open-sans-v40-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts-3by.pages.dev/poppins-v21-latin/poppins-v21-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://fonts-3by.pages.dev/poppins-v21-latin/poppins-v21-latin-600.woff2') format('woff2');
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+:root {
+  /* ## Colors */
+
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --font-color: hsl(0, 0%, 96%);
+
+  /* Font family */
+
+  --ff-heading: 'Poppins';
+  --ff-body: 'Open Sans';
+
+  /* Font size */
+
+  /* 24px */
+  --fs-300: 1.5rem;
+
+  /* 20px */
+  --fs-200: 1.5rem;
+
+  /* 16px */
+  --fs-100: 1rem;
+
+
+  /* Spacing  */
+
+  /* 100px */
+  --space-1000: 6.25rem;
+  /* 90px */
+  --space-900: 5.625rem;
+  /* 80px */
+  --space-800: 5rem;
+  /* 70px */
+  --space-700: 4.375rem;
+  /* 60px */
+  --space-600: 3.75rem;
+  /* 50px */
+  --space-500: 3.125rem;
+  /* 40px */
+  --space-400: 2.5rem;
+  /* 30px */
+  --space-300: 1.875rem;
+  /* 20px */
+  --space-200: 1.25rem;
+  /* 10px */
+  --space-100: 0.625rem;
+
+
+}
+
+
+body {
+  /* background-color: var(--Violet); */
+  background: url(/images/bg-mobile.svg) no-repeat var(--Violet);
+  background-size: cover;
+  font-family: var(--ff-body), sans-serif;
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+
+.wrapper {
+  width: 100%;
+  max-width: 28.125rem;
+  place-self: center;
+  object-fit: cover;
+  padding-inline: var(--space-300);
+  padding-block: var(--space-400);
+  display: grid;
+  gap: var(--space-400);
+  grid-template-rows: repeat(4, auto);
+  text-align: center;
+}
+
+.logo-section .logo {
+  width: 9.375rem;
+  height: 3.125rem;
+}
+
+.main-section {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: var(--space-200);
+  color: var(--font-color);
+}
+
+.main-section .title {
+  font-size: var(--fs-300);
+  font-family: var(--ff-heading);
+  font-weight: 600;
+}
+
+.main-section .register-btn {
+  padding-block: var(--space-100);
+  height: 1.875rem;
+}
+
+.main-section .btn {
+ --border-radius: 3.125rem;
+
+  background-color: var(--font-color);
+  padding-inline: var(--space-700);
+  padding-block: var(--space-100);
+  border-radius: var(--border-radius);
+  color: var(--Violet);
+  transition: color .2s ease,
+    background-color .3s ease;
+}
+.main-section .btn:hover {
+  background-color: var(--Soft-Magenta);
+  color: var(--font-color);
+}
+
+.social-links {
+  width: 70%;
+  display: flex;
+  place-self: center;
+  justify-content: space-evenly;
+  gap: var(--space-200);
+  margin-top: var(--space-500);
+}
+
+.social-links .social-icon {
+  /* spacing */
+
+  /* 7px */
+ --space-inside-200: 0.438rem;
+  /* 2px */
+ --space-inside-100: 0.125rem;
+
+ /* border radius */ 
+  --border-radius: 1.563rem;
+
+  font-size: var(--fs-200);
+  border: 2px solid var(--font-color);
+  border-radius: var(--border-radius);
+  padding-inline: var(--space-inside-200);
+  padding-block: var(--space-inside-100);
+  transition: color .3s ease,
+    border-color .3s ease;
+}
+
+.social-links .social-icon:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+
+@media (min-width: 756px){
+  body {
+    background: url(/images/bg-desktop.svg) no-repeat var(--Violet);
+    background-size: cover;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: unset;
+    place-self: center;
+    object-fit: cover;
+    padding-inline: var(--space-1000);
+    padding-block: var(--space-400);
+    display: grid;
+    gap: var(--space-400);
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .logo-section{
+    grid-row: 1;
+  }
+  .logo-section .logo{
+    width: 12.5rem;   /* 200px */
+  }
+
+  .demo-picture{
+    grid-row:2 ;
+  }
+
+  .main-section{
+    grid-row: 2;
+    grid-column: 2;
+    place-content: center;
+    text-align: start;
+  }
+  .main-section .title{
+    font-size: clamp(1.438rem, -0.672rem + 4.219vw, 3.125rem);
+    line-height: 1.2;
+  }
+  .main-section .description{
+    font-size: var(--fs-200);
+    line-height: 1.2;
+  }
+
+
+  .social-links{
+    width: 100%;
+    grid-row: 3;
+    grid-column: 2;
+    justify-content: end;
+    margin-block: 0;
+    padding-inline-end: var(--space-100);
+  }
+
+}
