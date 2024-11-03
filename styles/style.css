@@ -137,7 +137,7 @@ h6 {
 
 body {
   /* background-color: var(--Violet); */
-  background: url(/images/bg-mobile.svg) no-repeat var(--Violet);
+  background: url(./images/bg-mobile.svg) no-repeat var(--Violet);
   background-size: cover;
   font-family: var(--ff-body), sans-serif;
 }
@@ -236,7 +236,7 @@ a {
 
 @media (min-width: 756px){
   body {
-    background: url(/images/bg-desktop.svg) no-repeat var(--Violet);
+    background: url(./images/bg-desktop.svg) no-repeat var(--Violet);
     background-size: cover;
   }
 
