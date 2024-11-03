@@ -236,7 +236,7 @@ a {
 
 @media (min-width: 756px){
   body {
-    background: url(images/bg-desktop.svg) no-repeat var(--Violet);
+    background: url(/images/bg-desktop.svg) no-repeat var(--Violet);
     background-size: cover;
   }
 
